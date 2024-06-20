@@ -1,0 +1,43 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-size: 20px; /* Diğer öğeler için varsayılan font boyutu */
+}
+
+#canvas-container {
+    position: relative;
+    width: 100vw; /* Ekran genişliği kadar */
+    height: 100vh; /* Ekran yüksekliği kadar */
+    overflow: hidden; /* Canvas dışında çizilenlerin görünmesi için */
+}
+
+#canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: white; /* Canvas arka plan rengi */
+}
+
+.color-picker {
+    position: absolute;
+    bottom: 20px; /* Canvas altında renk seçici */
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: space-between;
+    padding: 20px; /* Renk seçici paneli biraz daha büyük yap */
+    background-color: #333;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    z-index: 1; /* Renk seçici diğer öğelerin üzerinde gösterilsin */
+}
+
+.color-option {
+    width: 30px; /* Renk seçeneklerinin boyutu artırıldı */
+    height: 30px; /* Renk seçeneklerinin boyutu artırıldı */
+    border-radius: 50%;
+    margin: 5px;
+    cursor: pointer;
+}
